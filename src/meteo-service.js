@@ -23,7 +23,7 @@ export class MeteoService {
 
         //console.log('orari', times);
 
-        const temperaures = hourlyData.temperature_2m;
+        const temperatures = hourlyData.temperature_2m;
 
         //console.log('temp', temperaures);
 
@@ -44,7 +44,7 @@ export class MeteoService {
         for (let i = 0; i < times.length; i++) {
             
             const time = times[i];
-            const temperaure = temperaures[i];
+            const temperature = temperatures[i];
             const rain = rains[i];
             const code = codes[i];
             const wind = winds[i];
@@ -59,7 +59,7 @@ export class MeteoService {
 
             const hourData = {
                 time,
-                temperaure,
+                temperature,
                 rain,
                 code,
                 wind
@@ -77,3 +77,5 @@ export class MeteoService {
         // {time:"2026-01-17T16:00", temperaure: 16, rain: 3, code: 0, wind: 12}]
     }
 }
+
+
