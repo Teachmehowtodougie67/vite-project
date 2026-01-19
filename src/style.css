@@ -2,3 +2,64 @@
   border: 1px solid red;
   box-sizing: border-box;
 }
+
+.day-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.day-date {
+    font-weight: bold;
+    min-width: 90px;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+.main-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.hourly-icons {
+    display: flex;
+    gap: 2px;               /* molto stretto per 24 icone */
+    overflow-x: auto;       /* scroll orizzontale se la finestra è piccola */
+    padding: 4px 0;
+    flex-grow: 1;
+}
+
+.hour-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 32px;        /* larghezza minima per icona + label */
+}
+
+.small-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.hour-label {
+    font-size: 0.7em;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Per mobile / schermi piccoli: icone ancora più compatte */
+@media (max-width: 768px) {
+    .small-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .hour-icon-wrapper {
+        min-width: 28px;
+    }
+}
